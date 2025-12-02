@@ -34,4 +34,4 @@ jobs:
       - name: Push Helm chart to OCI registry
         run: |
           OWNER_LOWERCASE=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          helm push mend-*.tgz oci://ghcr.io/${OWNER_LOWERCASE}
+          helm push mend-*.tgz oci://ghcr.io/${OWNER_LOWERCASE}/mendchart
