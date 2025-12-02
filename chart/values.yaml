@@ -24,7 +24,7 @@ ingress:
     appgw.ingress.kubernetes.io/health-probe-path: "/"
     appgw.ingress.kubernetes.io/health-probe-status-codes: "200-499"
   hosts:
-    - host: shimondarshan-azure-mend.northeurope.cloudapp.azure.com
+    - host: ""
       paths:
         - path: /
           pathType: Prefix
