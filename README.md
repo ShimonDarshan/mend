@@ -1,5 +1,6 @@
 # Mend's App
 
+## Intro
 To create an environment on the cloud, first you need to create an S3/Azure storage account to keep the relevant Terraform state files. This allows you and your team to maintain them without conflicts (using remote state files).
 
 Under the infra folder, I created 4 sub-folders:
@@ -20,7 +21,7 @@ To deploy an environment:
    - [AWS](./infra/aws-envs)
    - [Azure](./infra/azure-envs)
 5. Run `terraform init` and `terraform apply`
-
+6. After the terraform apply step finishes, you will see the terraform output that contains the DNS of the application. You can visit it via the browser on port 80 or via curl.
 ## Modules
 
 You can find my modules here:
