@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "main" {
 
 # AKS Cluster Module
 module "aks" {
-  source = "github.com/ShimonDarshan/mend-azure-infra/modules/aks-cluster?ref=add-module"
+  source = "github.com/ShimonDarshan/mend-azure-infra/modules/aks-cluster?ref=main"
 
   name                = var.cluster_name
   location            = azurerm_resource_group.main.location

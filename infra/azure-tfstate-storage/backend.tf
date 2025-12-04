@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "tfstate" {
 
 # Storage Account Module
 module "tfstate_storage" {
-  source = "github.com/ShimonDarshan/mend-azure-infra/modules/tfstate-storage?ref=add-module"
+  source = "github.com/ShimonDarshan/mend-azure-infra/modules/tfstate-storage?ref=main"
 
   resource_group_name      = azurerm_resource_group.tfstate.name
   location                 = azurerm_resource_group.tfstate.location
