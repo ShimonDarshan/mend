@@ -102,3 +102,13 @@ module "eks" {
 
   tags = var.tags
 }
+
+# Data source to get ingress service load balancer hostname
+data "kubernetes_service" "ingress_nginx" {
+  metadata {
+    name      = "ingress-nginx-controller"
+    namespace = "ingress-nginx"
+  }
+
+  depends_on = [module.eks]
+}

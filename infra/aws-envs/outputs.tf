@@ -55,7 +55,12 @@
 
 output "ingress_load_balancer_hostname" {
   description = "Load balancer hostname for ingress"
-  value       = module.eks.ingress_load_balancer_hostname
+  value       = try(data.kubernetes_service.ingress_nginx.status[0].load_balancer[0].ingress[0].hostname, null)
+}
+
+output "ingress_dns" {
+  description = "Ingress DNS endpoint - use this to access your application"
+  value       = try("http://${data.kubernetes_service.ingress_nginx.status[0].load_balancer[0].ingress[0].hostname}", "Ingress not available yet")
 }
 
 # output "dns_record_name" {
