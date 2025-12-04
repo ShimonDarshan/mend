@@ -53,7 +53,7 @@ provider "kubernetes" {
 }
 
 module "eks" {
-  source = "github.com/ShimonDarshan/mend-aws-infra/modules/eks?ref=add-module"
+  source = "github.com/ShimonDarshan/mend-aws-infra/modules/eks?ref=main"
 
   # Cluster configuration
   cluster_name       = var.cluster_name
