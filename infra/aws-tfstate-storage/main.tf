@@ -1,5 +1,5 @@
 module "tfstate_storage" {
-  source = "github.com/ShimonDarshan/mend-aws-infra/modules/s3storage?ref=add-module"
+  source = "github.com/ShimonDarshan/mend-aws-infra/modules/s3storage?ref=main"
 
   bucket_name = var.bucket_name
   environment = var.environment
